@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Moedas</title>
+    <title>Conversor de Moedas - Exercício 8.2 (Refatorado)</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
         <h2>Conversor de Moedas</h2>
-        <p>Converta Reais (R$) para Dólares (US$)</p>
+        <h4>Converta Reais (R$) em Dólares (US$)</h4>
+	<p>Considerando $1 = R$ 5,30</9>
         
+	<!-- Seção onde o usuário digitará o valor a ser convertido-->
         <input type="number" id="valorReais" placeholder="Digite o valor em R$" step="0.01" min="0">
+        <button id="btnConverter">Converter</button>
         
-        <button onclick="converterMoeda()">Converter</button>
-        
+        <!-- Aqui vai aparecer tanto o resultado quanto os alertas de erro -->
         <div id="resultado"></div>
+
+        <!-- Seção de histórico de resultados-->
+        <div id="areaHistorico" class="escondido">
+            <hr>
+            <h3>Últimas conversões:</h3>
+            <ul id="listaHistorico"></ul>
+        </div>
     </div>
 
     <script src="script.js"></script>
